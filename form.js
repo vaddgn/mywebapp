@@ -10,7 +10,7 @@ tg.MainButton.onClick(function(){
         a : 'отправлено'
     };
     let test = document.getElementById('test')
-    test.innerHTML = 'asdasdasdasdasdasdasd';
+    test.innerHTML = JSON.stringify(data);
     tg.sendData(JSON.stringify(data));
     tg.MainButton.setText('Отправлено');
 });
