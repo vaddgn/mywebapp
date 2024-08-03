@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <!-- Подключение скрипта Telegram Web Apps API -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
@@ -22,9 +21,9 @@
         let btn = document.getElementById('btn');
 
         btn.addEventListener('click', function(){
+            const name = document.getElementById('name').value;
             tg.MainButton.setText('Отправлено');
             tg.MainButton.show();
-            const name = document.getElementById('name').value;
             tg.sendData(JSON.stringify({name: name}));
         });
     </script>
