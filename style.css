@@ -67,10 +67,7 @@ body {
     color: rgba(255, 255, 255, 0.842);
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 17px;
-    @media (max-width:340px) {
-      font-size: 15px;
-    }
+    font-size: 15px;
  }
  .form-inner input, textarea{
     display: block;
