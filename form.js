@@ -1,31 +1,16 @@
 let tg = window.Telegram.WebApp;
-
 tg.expand();
 
-tg.MainButton.setText('Отправить');
-tg.MainButton.show();
-
-tg.MainButton.onClick(function(){
+form = document.getElementById("main-form");
+form.addEventListener("submit", form_check);
+function form_check(event){
+    event.preventDefault();
+    let form = document.getElementById("main-form");
     let data = {
-        a : 'отправлено'
+        balls : form.balls.value,
+        impres : form.impres.value,
+        quest : form.quest.value
     };
-    let test = document.getElementById('test')
-    test.innerHTML = JSON.stringify(data);
     tg.sendData(JSON.stringify(data));
-    tg.MainButton.setText('Отправлено');
-});
-
-
-let btn = document.getElementById('btn');
-
-document.addEventListener('click', function(){
-    let data = {
-        a : 'отправлено'
-    };
-    let test = document.getElementById('test')
-    test.innerHTML = JSON.stringify(data);
-    tg.sendData(JSON.stringify(data));
-    tg.MainButton.setText('Отправлено');
-    console.log(JSON.stringify(data))
-});
-
+    document.getElementById("submit").innerHTML = 'Отправлено';
+}
