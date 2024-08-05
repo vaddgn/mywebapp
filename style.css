@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+ }
+ .transparent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://html5book.ru/wp-content/uploads/2017/01/photo-roses.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right bottom, rgba(43, 44, 78, .5), rgba(104, 22, 96, .5));
+ }
+ .form-inner {
+    position: relative;
+    width: min(500px, 90%);
+ }
+ .form-inner h3 {
+    position: relative;
+    margin-top: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    text-transform: uppercase;
+ }
+ .form-inner h3:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 60px;
+    background: #1762EE;
+ }
+ .form-inner label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.842);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 17px;
+    @media (max-width:340px) {
+      font-size: 15px;
+    }
+ }
+ .form-inner input, textarea{
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px 0 15px;
+    border-width: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(255, 255, 255, .2);
+    font-family: 'Roboto', sans-serif;
+ }
+ 
+textarea {
+   resize: none;
+   outline: none;
+}
+
+ .form-inner input:focus {
+   outline: none;
+ }
+ button {
+    background: #1762EE;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin: 10px 0 15px;
+    border-width: 0;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer
+ }
