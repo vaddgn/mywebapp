@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <!-- Подключение скрипта Telegram Web Apps API -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Survey Form</h1>
-    <form id="surveyForm">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <button type="button" id="btn">Submit</button>
-        <p id="test">test</p>
-    </form>
+    <div class="container">
+        <form class="transparent" id="main-form" method="post">
+            <div class="form-inner">
+            <h3>обратная связь</h3>
+            <label for="balls">1. Сколько баллов от 1 до 10 ты бы поставила этому подкасту?</label>
+            <input type="text" name="balls">
+            <label for="impres">2. Какое общее впечатление у тебя от пройденного материала? - поделись одним предложением</label>
+            <textarea rows="3" name="impres"></textarea>
+            <label for="quest">3. Какие есть вопроса ко мне после прослушивания? Что непонятно? Есть ли сопротивление к информации?</label>
+            <textarea rows="3" name="quest"></textarea>
+
+            <button type="submit" id="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="form.js"></script>
 </body>
